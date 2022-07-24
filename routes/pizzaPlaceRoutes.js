@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { getPizzaPlaces } = require("../controllers/pizzaPlacesController");
 
 router.get("/", (req, res) => {
   res.send({ message: "Get Pizza Places" });
