@@ -1,1 +1,2 @@
-console.log("Hello Oa");
+const express = require("express");
+const dotenv = require("dotenv").config();
