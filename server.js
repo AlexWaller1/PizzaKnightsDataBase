@@ -4,8 +4,6 @@ const port = process.env.PORT || 3012;
 
 const app = express();
 
-app.get("/api/pizzaPlaces", (req, res) => {
-  res.send({ message: "Get Pizza Places" });
-});
+app.use("/api/pizzaPlaces", require("./routes/pizzaPlaceRoutes"));
 
 app.listen(port, () => console.log(`Server Started on port ${port}`));
