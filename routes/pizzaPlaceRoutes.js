@@ -9,6 +9,6 @@ const {
 
 router.route("/").get(getPizzaPlaces).post(postPizzaPlace);
 
-router.route("/:").delete(deletePizzaPlace).put(updatePizzaPlace);
+router.route("/:id").delete(deletePizzaPlace).put(updatePizzaPlace);
 
 module.exports = router;
