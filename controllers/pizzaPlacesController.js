@@ -9,7 +9,9 @@ const getPizzaPlaces = (req, res) => {
 // @route POST /api/pizzaPlaces
 // @access Private
 const postPizzaPlace = (req, res) => {
-  console.log(req.body);
+  if (!req.body.text) {
+    res.status(400).json({ message: "Please add a text field" });
+  }
   res.status(200).json({ message: "Post Pizza Place" });
 };
 
