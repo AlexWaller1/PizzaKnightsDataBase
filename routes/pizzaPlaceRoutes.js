@@ -1,19 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const { getPizzaPlaces } = require("../controllers/pizzaPlacesController");
+const {
+  getPizzaPlaces,
+  postPizzaPlace,
+  updatePizzaPlace,
+  deletePizzaPlace
+} = require("../controllers/pizzaPlacesController");
 
 router.get("/", getPizzaPlaces);
 
-router.post("/", (req, res) => {
-  res.send({ message: "Post Pizza Places" });
-});
+router.post("/", postPizzaPlace);
 
-router.put("/:id", (req, res) => {
-  res.send({ message: `Update Pizza Place ${req.params.id}` });
-});
+router.put("/:id", updatePizzaPlace);
 
-router.delete("/:id", (req, res) => {
-  res.send({ message: `Delete Pizza Place ${req.params.id}` });
-});
+router.delete("/:id", deletePizzaPlace);
 
 module.exports = router;
