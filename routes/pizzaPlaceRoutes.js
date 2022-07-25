@@ -7,12 +7,8 @@ const {
   deletePizzaPlace
 } = require("../controllers/pizzaPlacesController");
 
-router.get("/", getPizzaPlaces);
+router.route("/").get(getPizzaPlaces).post(postPizzaPlace);
 
-router.post("/", postPizzaPlace);
-
-router.put("/:id", updatePizzaPlace);
-
-router.delete("/:id", deletePizzaPlace);
+router.route("/:").delete(deletePizzaPlace).put(updatePizzaPlace);
 
 module.exports = router;
