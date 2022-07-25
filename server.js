@@ -5,6 +5,7 @@ const port = process.env.PORT || 3012;
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/pizzaPlaces", require("./routes/pizzaPlaceRoutes"));
 
