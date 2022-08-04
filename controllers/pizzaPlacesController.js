@@ -1,4 +1,6 @@
 const asyncHandler = require("express-async-handler");
+
+const PizzaPlace = require("../models/pizzaPlaceModel");
 // @description Get Pizza Places
 // @route GET /api/pizzaPlaces
 // @access Private
