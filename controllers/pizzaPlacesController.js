@@ -1,14 +1,14 @@
 // @description Get Pizza Places
 // @route GET /api/pizzaPlaces
 // @access Private
-const getPizzaPlaces = (req, res) => {
+const getPizzaPlaces = async (req, res) => {
   res.status(200).json({ message: "Get Pizza Places" });
 };
 
 // @description Post Pizza Places
 // @route POST /api/pizzaPlaces
 // @access Private
-const postPizzaPlace = (req, res) => {
+const postPizzaPlace = async (req, res) => {
   if (!req.body.text) {
     res.status(400);
     throw new Error("Please add a text field");
@@ -19,14 +19,14 @@ const postPizzaPlace = (req, res) => {
 // @description Update Pizza Places
 // @route PUT /api/pizzaPlaces/:id
 // @access Private
-const updatePizzaPlace = (req, res) => {
+const updatePizzaPlace = async (req, res) => {
   res.status(200).json({ message: `Update Pizza Place ${req.params.id}` });
 };
 
 // @description Delete Pizza Places
 // @route DELETE /api/pizzaPlaces/:id
 // @access Private
-const deletePizzaPlace = (req, res) => {
+const deletePizzaPlace = async (req, res) => {
   res.status(200).json({ message: `Delete Pizza Place ${req.params.id}` });
 };
 
